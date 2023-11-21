@@ -34,7 +34,7 @@ export const createSessionService = async ({
         },
         String(process.env.SECRET_KEY),
         {
-            subject: user.id,
+            subject: String(user.id),
             expiresIn: "30m"
         }
     )
