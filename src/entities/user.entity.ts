@@ -1,5 +1,5 @@
 import { Exclude } from "class-transformer";
-import { BeforeInsert, BeforeUpdate, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { BeforeInsert, BeforeUpdate, Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { hashSync } from "bcrypt";
 import { PhoneNumber } from "./phones.entity";
 
@@ -22,6 +22,15 @@ export class User {
 
     @OneToMany(() => PhoneNumber, (phone) => phone.user, { cascade: true })
     phones: PhoneNumber[]
+
+    @CreateDateColumn()
+    created_at: Date
+
+    @UpdateDateColumn()
+    updated_at: Date
+
+    @Column({ type: 'timestamp', nullable: true })
+    last_login: Date
 
     @BeforeUpdate()
     @BeforeInsert()

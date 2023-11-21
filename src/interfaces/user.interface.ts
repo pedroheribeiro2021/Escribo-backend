@@ -5,3 +5,8 @@ export interface IUserRequest {
     password: string
     phones: []
 }
+
+export interface IUserLogin {
+    email: string
+    password: string
+}

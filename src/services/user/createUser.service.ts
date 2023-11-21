@@ -12,5 +12,15 @@ export const createUserService = async (userData: IUserRequest): Promise<object>
 
     await userRepository.save(newUser)
 
-    return newUser
+    // const token = generateToken(newUser.id)
+
+    return {
+        id: newUser.id,
+        data_criacao: newUser.created_at, 
+        data_atualizacao: newUser.updated_at, 
+        ultimo_login: newUser.last_login,
+        // token,
+      }
 }
+
+
