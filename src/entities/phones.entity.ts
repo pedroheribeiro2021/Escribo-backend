@@ -8,10 +8,10 @@ export class PhoneNumber {
   @PrimaryGeneratedColumn()
   id: number
 
-  @Column()
+  @Column({ length: 12 })
   phone: string
 
-  @Column()
+  @Column({ length: 2 })
   ddd: string
 
   @ManyToOne(() => User, (user) => user.phones)
