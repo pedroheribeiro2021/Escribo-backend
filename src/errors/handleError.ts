@@ -7,13 +7,13 @@ export const handleError = async (error: Error, req: Request, res: Response, nex
     if(error instanceof AppError){
         console.log(error)
         return res.status(error.statusCode).json({
-            message: error.message
+            mensagem: error.mensagem
         })
     }
 
     console.log(error)
 
     return res.status(500).json({
-        message: 'Internal server error'
+        mensagem: 'Internal server error'
     })
 }

@@ -29,7 +29,7 @@ export class User {
     @UpdateDateColumn()
     updated_at: Date
 
-    @Column({ type: 'timestamp', nullable: true })
+    @Column({ nullable: true })
     last_login: Date
 
     @BeforeUpdate()
