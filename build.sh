@@ -2,7 +2,6 @@
 # exit on error
 set -o errexit
 
-cd backend
 yarn
 yarn build
-yarn typeorm migration:run -d dist/src/data-source
+yarn typeorm migration:run -d dist/data-source
