@@ -4,10 +4,10 @@ import { hashSync } from "bcrypt";
 import { PhoneNumber } from "./phones.entity";
 
 
-@Entity('users')
+@Entity("users")
 export class User {
     
-    @PrimaryGeneratedColumn('uuid')
+    @PrimaryGeneratedColumn("uuid")
     id: string
 
     @Column({ length: 100 })
@@ -29,7 +29,7 @@ export class User {
     @UpdateDateColumn()
     updated_at: Date
 
-    @Column({ type: 'timestamp', nullable: true })
+    @Column({ nullable: true })
     last_login: Date
 
     @BeforeUpdate()
