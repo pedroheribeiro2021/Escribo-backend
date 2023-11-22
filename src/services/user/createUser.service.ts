@@ -11,14 +11,11 @@ export const createUserService = async (userData: IUserRequest): Promise<object>
     newUser.last_login = new Date()
     await userRepository.save(newUser)
 
-    // const token = generateToken(newUser.id)
-
     return {
         id: newUser.id,
         data_criacao: newUser.created_at, 
         data_atualizacao: newUser.updated_at, 
         ultimo_login: newUser.last_login,
-        // token: req.user.token
       }
 }
 

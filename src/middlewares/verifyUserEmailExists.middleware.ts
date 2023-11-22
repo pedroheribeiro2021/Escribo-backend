@@ -14,7 +14,7 @@ export const verifyUserEmailExistsMiddleware = async (req: Request, res: Respons
     
     if(email.length > 0) {
         
-        throw new AppError('E-mail já existente', 400)
+        throw new AppError("E-mail já existente", 400)
     }
 
     next()

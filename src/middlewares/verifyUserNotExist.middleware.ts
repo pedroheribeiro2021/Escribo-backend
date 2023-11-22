@@ -14,7 +14,7 @@ export const verifyUsernotExistMiddleware = async (req: Request, res: Response, 
     
 
     if(!user) {
-        throw new AppError('Usuário não encontrado', 404)
+        throw new AppError("Usuário não encontrado", 404)
     }
 
 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { AppDataSource } from "../../data-source"
 import { User } from "../../entities/user.entity"
 import { IUserUpdate } from "../../interfaces/user.interface"

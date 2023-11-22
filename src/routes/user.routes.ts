@@ -8,7 +8,7 @@ import { ensureOwnUserMiddleware } from "../middlewares/ensureOwnUser.middleware
 
 export const userRoutes = Router()
 
-userRoutes.post('', verifyUserEmailExistsMiddleware, createUserController)
-userRoutes.get('', ensureAuthMiddleware, listUsersController)
-userRoutes.patch('/:id', ensureAuthMiddleware, verifyUsernotExistMiddleware, ensureOwnUserMiddleware, updateUserController)
-userRoutes.delete('/:id', ensureAuthMiddleware, verifyUsernotExistMiddleware, ensureOwnUserMiddleware, deleteUserController)
+userRoutes.post("", verifyUserEmailExistsMiddleware, createUserController)
+userRoutes.get("", ensureAuthMiddleware, listUsersController)
+userRoutes.patch("/:id", ensureAuthMiddleware, verifyUsernotExistMiddleware, ensureOwnUserMiddleware, updateUserController)
+userRoutes.delete("/:id", ensureAuthMiddleware, verifyUsernotExistMiddleware, ensureOwnUserMiddleware, deleteUserController)
