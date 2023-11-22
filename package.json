@@ -7,7 +7,9 @@
     "dev": "ts-node-dev --ignore-watch node_modules --cls --rs src/server.ts",
     "typeorm": "typeorm-ts-node-commonjs",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "start": "node dist/src/server.js",
+    "build": "tsc"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
