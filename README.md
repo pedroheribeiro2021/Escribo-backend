@@ -10,12 +10,13 @@ Para baixar o projeto, você precisará ter instalado em sua máquina as seguint
 
 2 - Execute o comando yarn install para instalar as dependências.
 
-3 - Crie um arquivo .env na raiz da pasta e configure as variáveis de ambiente com a URL para acesso ao banco de dados onde deverá ter seu login e senha do postgres conforme o arquivo env.example.
+3 - Crie um arquivo .env na raiz do projeto e configure as variáveis de ambiente com a URL para acesso ao banco de dados, onde deverá ter seu login e senha do postgres conforme o arquivo env.example.
+
 4 - Crie um banco de dados para o projeto.
 
 5 - Execute o comando: "yarn typeorm migration:generate src/migrations/(NOME-DA-MIGRATION) -d src/data-source.ts" para criar o arquivo de migração para o banco de dados.
 
-6 - Execute o comando: "yarn typeorm migration:run -d src/data-source.ts" para rodar as migração e persistir no banco de dados.
+6 - Execute o comando: "yarn typeorm migration:run -d src/data-source.ts" para rodar a migração e persistir no banco de dados.
 
 7 - No terminal bash execute o comando "yarn dev".
 
@@ -74,7 +75,7 @@ Bem-vindo à documentação da API!
 
 # Observações:
 
-1 - Para realizar ações de leitura (listar usuários), é necessário incluir o token de autenticação no header da requisição.
+1 - Para realizar ações de leitura (listar usuários), é necessário incluir o token de autenticação no header da requisição, ou seja, o usuário precisará estar autenticado(logado).
 
 2 - Para atualizar ou excluir um usuário, é necessário estar autenticado e ser o próprio usuário que está sendo atualizado ou excluído.
 
