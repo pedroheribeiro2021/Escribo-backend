@@ -7,12 +7,18 @@ Este projeto é uma aplicação de CRUD de usuários.
 Para baixar o projeto, você precisará ter instalado em sua máquina as seguintes ferramentas: Git, Node.js, PostgreSQL e Yarn para gerenciar pacotes. Além disso, é bom ter um editor para trabalhar com o um editor de texto como VSCode.
 
 1 - Clone o repositório para sua máquina local.
+
 2 - Execute o comando yarn install para instalar as dependências.
+
 3 - Crie um arquivo .env na raiz da pasta e configure as variáveis de ambiente com a URL para acesso ao banco de dados onde deverá ter seu login e senha do postgres conforme o arquivo env.example.
 4 - Crie um banco de dados para o projeto.
+
 5 - Execute o comando: "yarn typeorm migration:generate src/migrations/(NOME-DA-MIGRATION) -d src/data-source.ts" para criar o arquivo de migração para o banco de dados.
+
 6 - Execute o comando: "yarn typeorm migration:run -d src/data-source.ts" para rodar as migração e persistir no banco de dados.
-7 - No terminal bash execute o comando "yarn dev"
+
+7 - No terminal bash execute o comando "yarn dev".
+
 8 - Pronto! A aplicação estará rodando em http://localhost:3003.
 
 # API
