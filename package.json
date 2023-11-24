@@ -8,7 +8,7 @@
     "typeorm": "typeorm-ts-node-commonjs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "start": "node dist/src/server.js",
+    "start": "node dist/server.js",
     "build": "tsc"
   },
   "dependencies": {
@@ -24,11 +24,7 @@
     "typeorm": "^0.3.17",
     "typescript": "^5.3.2"
   },
-
-  "engines" : { 
-    "node" : ">=8.0.0" 
-  }
-,
+  
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.17",
